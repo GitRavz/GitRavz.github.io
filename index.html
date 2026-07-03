@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lhienhiel Louise Ravelo — Web Developer &amp; Tech Support Specialist</title>
+  <meta name="description" content="Lhienhiel Louise Ravelo — IT graduate, web developer, and technical support specialist based in Bacoor City, Cavite. I build web solutions with PHP &amp; MySQL and keep the hardware behind them running." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lhienhiel Louise Ravelo — Web Developer &amp; Tech Support Specialist" />
+  <meta property="og:description" content="I build clean web solutions with PHP &amp; MySQL — and fix the machines they run on." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">LR</a>
+      <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header id="top">
+    <div class="container hero">
+      <div class="hero__text reveal">
+        <p class="hero__greeting">Hi, I'm 👋</p>
+        <h1 class="hero__name">Lhienhiel Louise Ravelo</h1>
+        <h2 class="hero__role">Web Developer &amp; Tech Support Specialist</h2>
+        <p class="hero__desc">
+          I build clean web solutions with PHP, MySQL, HTML &amp; CSS — and I keep the
+          computers, printers, and networks behind them running. Based in Cavite, Philippines.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="avatar" aria-hidden="true">LR</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="about">
+    <div class="container container--narrow reveal">
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">A developer who also talks to people — and fixes the hardware.</h2>
+      <p>
+        I'm an Information Technology graduate from Cavite State University with a rare mix of skills:
+        I write software <em>and</em> I keep the physical systems it runs on alive. Day to day I provide
+        first-line technical support — troubleshooting computers, printers, and networks — while also
+        building the web tools that make a business run smoother.
+      </p>
+      <p>
+        My favorite kind of work sits right where those two worlds meet. At a busy printing shop I saw order
+        tracking done by memory and paper, so I built a web-based order monitoring system that replaced the
+        chaos. I like solving real, tangible problems for the people right in front of me.
+      </p>
+      <div class="stat-row">
+        <span class="stat-pill">BSIT · 2024</span>
+        <span class="stat-pill">Tech Support since 2024</span>
+        <span class="stat-pill">Full-stack web projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="container reveal">
+      <span class="section-label">Skills</span>
+      <h2 class="section-title">What I work with</h2>
+      <div class="grid-3">
+        <div class="skill-card">
+          <h3>Web Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">XAMPP</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Technical Support &amp; Hardware</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PC assembly &amp; repair</span>
+            <span class="skill-tag">Printer troubleshooting</span>
+            <span class="skill-tag">Sublimation printers</span>
+            <span class="skill-tag">CCTV setup</span>
+            <span class="skill-tag">LAN &amp; IP config</span>
+            <span class="skill-tag">AnyDesk</span>
+            <span class="skill-tag">TeamViewer</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools &amp; Strengths</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MS Office</span>
+            <span class="skill-tag">User &amp; access management</span>
+            <span class="skill-tag">Problem-solving</span>
+            <span class="skill-tag">Attention to detail</span>
+            <span class="skill-tag">Time management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container reveal">
+      <span class="section-label">Projects</span>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="grid-2">
+        <article class="project-card">
+          <div class="project-card__banner">Order Monitoring System</div>
+          <div class="project-card__body">
+            <span class="project-card__tag">PHP · MySQL · JavaScript</span>
+            <h3 class="project-card__title">Web-Based Order Monitoring System</h3>
+            <p class="project-card__desc">
+              A full-stack system I built and deployed at a printing shop to track orders through every
+              stage of the workflow — replacing paper and guesswork, and improving order tracking and
+              efficiency across the team.
+            </p>
+            <div class="project-card__links">
+              <a href="#contact">Ask me about it →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__banner">More coming soon</div>
+          <div class="project-card__body">
+            <span class="project-card__tag">In progress</span>
+            <h3 class="project-card__title">Next project</h3>
+            <p class="project-card__desc">
+              I'm continually building. Check my GitHub for the latest, or reach out if you'd like to
+              collaborate on something.
+            </p>
+            <div class="project-card__links">
+              <a href="https://github.com/GitRavz" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <div class="container container--narrow reveal">
+      <span class="section-label">Experience &amp; Education</span>
+      <h2 class="section-title">The path so far</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__meta">Nov 2024 – Present</span>
+          <h3 class="timeline__title">Technical Support Assistant</h3>
+          <p class="timeline__place">Mark D Unlimited Enterprise · Bacoor City, Cavite</p>
+          <ul>
+            <li>Provided first-line support for computer, printer, and network issues in a printing-shop environment.</li>
+            <li>Performed hardware maintenance — assembly, setup, and repair of computers.</li>
+            <li>Installed and configured CCTV systems for monitoring and security.</li>
+            <li>Managed user accounts: setup, password resets, and access control.</li>
+            <li>Installed and configured sublimation printers, including on-site client installations.</li>
+            <li>Resolved issues remotely with AnyDesk / TeamViewer, reducing on-site visits.</li>
+            <li>Developed and deployed a web-based order monitoring system (HTML, CSS, JS, PHP, MySQL).</li>
+          </ul>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__meta">Graduated 2024</span>
+          <h3 class="timeline__title">BS in Information Technology</h3>
+          <p class="timeline__place">Cavite State University – Imus Campus</p>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__meta">Graduated 2020</span>
+          <h3 class="timeline__title">TVL – ICT Strand</h3>
+          <p class="timeline__place">Imus Unida Christian School</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="container container--narrow reveal">
+      <span class="available-badge">Open to opportunities</span>
+      <h2 class="section-title">Let's work together.</h2>
+      <p style="color: var(--color-text-muted); font-size: var(--text-lg);">
+        Open to web development projects and technical support roles — feel free to reach out.
+      </p>
+      <a href="mailto:lhienhielravelo@gmail.com" class="contact__email">lhienhielravelo@gmail.com</a>
+      <div class="social-row">
+        <a href="https://github.com/GitRavz" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+        </a>
+        <a href="mailto:lhienhielravelo@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      © <span id="year">2026</span> Lhienhiel Louise Ravelo · Built with HTML, CSS &amp; JS · Deployed on GitHub Pages
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
