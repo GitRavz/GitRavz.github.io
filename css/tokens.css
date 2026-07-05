@@ -1,18 +1,18 @@
 :root {
-  /* Primary – trustworthy slate blue */
-  --color-primary:       #3B5BDB;
-  --color-primary-light: #748FFC;
-  --color-primary-dim:   #E7EBFF;
+  /* Primary – navy blue, pulled from the polo in the hero photo */
+  --color-primary:       #2C4A8C;
+  --color-primary-light: #5E7BC4;
+  --color-primary-dim:   #E9EEF8;
 
-  /* Neutrals */
-  --color-bg:            #FAFAFA;
+  /* Neutrals – warm off-white to echo the building's sand tone */
+  --color-bg:            #FAF8F4;
   --color-surface:       #FFFFFF;
-  --color-border:        #E9ECEF;
-  --color-text:          #1A1A2E;
-  --color-text-muted:    #6C757D;
+  --color-border:        #E7E2D9;
+  --color-text:          #1B2440;
+  --color-text-muted:    #6B7280;
 
-  /* Accent – warm amber */
-  --color-accent:        #F59F00;
+  /* Accent – warm sand, from the building behind him */
+  --color-accent:        #C69C6D;
 
   /* Status */
   --color-success:       #2F9E44;
@@ -65,5 +65,5 @@
   --shadow-sm:   0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md:   0 4px 16px rgba(0,0,0,0.08);
   --shadow-lg:   0 12px 40px rgba(0,0,0,0.10);
-  --shadow-card: 0 2px 12px rgba(59,91,219,0.07);
+  --shadow-card: 0 2px 12px rgba(44,74,140,0.08);
 }
