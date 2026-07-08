@@ -36,4 +36,4 @@ The site is deployed with GitHub Pages:
 
 ## Contact
 - GitHub: https://github.com/GitRavz
-- Email: lhienhielravelo@gmail.com
+- Email: lhienhielravelo13@gmail.com
