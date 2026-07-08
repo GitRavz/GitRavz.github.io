@@ -1,8 +1,10 @@
 # Lhienhiel Louise Ravelo — Portfolio
 
-Personal portfolio site. Static HTML/CSS/JS — no build step, deploys straight to GitHub Pages.
+A personal portfolio website presenting my work, skills, and professional background.
+It is built as a static site using HTML, CSS, and JavaScript with no build step, and is
+deployed to GitHub Pages.
 
-## Structure
+## Project Structure
 ```
 index.html          Single-page layout
 css/tokens.css      Design tokens (colors, type, spacing)
@@ -10,31 +12,28 @@ css/base.css        Reset + typography defaults
 css/layout.css      Container, nav, hero, grids
 css/components.css  Buttons, cards, tags, timeline, badges
 js/main.js          Mobile nav, scroll reveal, footer year
-assets/             Images (avatar, og-image) — optional
+assets/             Images, portrait, and CV
 ```
 
-## Run locally
-Just open `index.html` in a browser, or serve it:
+## Running Locally
+Open `index.html` directly in a web browser, or serve it locally:
 ```
 python -m http.server 8000
 ```
+Then visit `http://localhost:8000`.
 
-## Deploy to GitHub Pages
-1. Create a repo named `<your-username>.github.io` (or any repo).
-2. Push these files to the `main` branch.
-   ```
-   git init
-   git add .
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/GitRavz/<repo>.git
-   git push -u origin main
-   ```
-3. Repo → **Settings → Pages** → Source: `main` / root → Save.
-4. Live at `https://GitRavz.github.io/<repo>/` within a minute.
-   (If the repo is named `GitRavz.github.io`, it's served at `https://GitRavz.github.io/`.)
+## Deployment
+The site is deployed with GitHub Pages:
 
-## To personalize later
-- Replace the `LR` monogram avatar with a photo: add `assets/avatar.jpg`, swap the `.avatar` div in `index.html` for an `<img>`.
-- Update the GitHub link (currently `https://github.com/`) with your real profile.
-- Add a real CV download button + `assets/og-image.jpg` for nicer social sharing.
+1. Push the project files to the `main` branch of the repository.
+2. In the repository, go to **Settings → Pages** and set the source to `main` / root.
+3. The site is published at `https://GitRavz.github.io/`.
+
+## Technology
+- HTML5, CSS3, and vanilla JavaScript
+- No frameworks or build tooling
+- Responsive, mobile-friendly layout
+
+## Contact
+- GitHub: https://github.com/GitRavz
+- Email: lhienhielravelo@gmail.com
