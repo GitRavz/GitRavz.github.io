@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A0B" />
   <title>Lhienhiel Louise Ravelo — Web Developer &amp; Tech Support Specialist</title>
   <meta name="description" content="Lhienhiel Louise Ravelo — IT graduate, web developer, and technical support specialist based in Bacoor City, Cavite. I build web solutions with PHP &amp; MySQL and keep the hardware behind them running." />
 
@@ -10,29 +11,30 @@
   <meta property="og:title" content="Lhienhiel Louise Ravelo — Web Developer &amp; Tech Support Specialist" />
   <meta property="og:description" content="I build clean web solutions with PHP &amp; MySQL — and fix the machines they run on." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/oms-dashboard.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/tokens.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/tokens.css?v=7" />
+  <link rel="stylesheet" href="css/base.css?v=7" />
+  <link rel="stylesheet" href="css/layout.css?v=7" />
+  <link rel="stylesheet" href="css/components.css?v=7" />
 </head>
 <body>
 
   <!-- ============ NAV ============ -->
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="#top" class="nav__logo">LR</a>
-      <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="#top" class="nav__logo">ravz.dev</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </nav>
@@ -41,9 +43,9 @@
   <header id="top">
     <div class="container hero">
       <div class="hero__text reveal">
-        <p class="hero__greeting">Hi, I'm 👋</p>
+        <p class="hero__greeting"><span class="prompt">&gt;</span> hello_world<span class="caret" aria-hidden="true"></span></p>
         <h1 class="hero__name">Lhienhiel Louise Ravelo</h1>
-        <h2 class="hero__role">Web Developer &amp; Tech Support Specialist</h2>
+        <h2 class="hero__role">Web Developer<br /><span class="grad-text">&amp; Tech Support</span></h2>
         <p class="hero__desc">
           I build database-driven web systems with PHP &amp; MySQL, shipping faster with
           AI-assisted development — and I keep the computers, printers, and networks behind
@@ -66,11 +68,19 @@
     </div>
   </header>
 
+  <!-- ============ TECH TICKER ============ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">PHP</span><span class="ticker__item">MySQL</span><span class="ticker__item">JavaScript</span><span class="ticker__item">HTML</span><span class="ticker__item">CSS</span><span class="ticker__item">Git</span><span class="ticker__item">Claude Code</span><span class="ticker__item">XAMPP</span><span class="ticker__item">cPanel</span><span class="ticker__item">Networking</span><span class="ticker__item">Hardware Repair</span><span class="ticker__item">CCTV</span>
+      <span class="ticker__item">PHP</span><span class="ticker__item">MySQL</span><span class="ticker__item">JavaScript</span><span class="ticker__item">HTML</span><span class="ticker__item">CSS</span><span class="ticker__item">Git</span><span class="ticker__item">Claude Code</span><span class="ticker__item">XAMPP</span><span class="ticker__item">cPanel</span><span class="ticker__item">Networking</span><span class="ticker__item">Hardware Repair</span><span class="ticker__item">CCTV</span>
+    </div>
+  </div>
+
   <!-- ============ ABOUT ============ -->
   <section id="about" class="about">
     <div class="container container--narrow reveal">
       <span class="section-label">About Me</span>
-      <h2 class="section-title">A developer who also talks to people — and fixes the hardware.</h2>
+      <h2 class="section-title section-title--wide">A developer who also talks to people — and fixes the hardware.</h2>
       <p>
         I'm an Information Technology graduate from Cavite State University with a rare mix of skills:
         I write software <em>and</em> I keep the physical systems it runs on alive. Day to day I provide
@@ -107,6 +117,7 @@
             <span class="skill-tag">PHP</span>
             <span class="skill-tag">MySQL</span>
             <span class="skill-tag">XAMPP</span>
+            <span class="skill-tag">cPanel</span>
             <span class="skill-tag">Git &amp; GitHub</span>
             <span class="skill-tag">VS Code</span>
             <span class="skill-tag">Claude Code</span>
@@ -141,24 +152,156 @@
   <!-- ============ PROJECTS ============ -->
   <section id="projects">
     <div class="container reveal">
-      <span class="section-label">Projects</span>
+      <span class="section-label">Featured Project</span>
       <h2 class="section-title">Things I've built</h2>
-      <div class="grid-2">
-        <article class="project-card">
-          <div class="project-card__banner">
-            <img src="assets/oms-login.png" alt="Login screen of the Mark D' Unlimited Order Monitoring System" loading="lazy" />
+
+      <!-- ---- OMS case study ---- -->
+      <article class="case">
+        <div class="case__head">
+          <div>
+            <p class="case__eyebrow">
+              <span class="badge-live">Live in production</span>
+              <span>PHP · MySQL · JavaScript · cPanel</span>
+            </p>
+            <h3 class="case__title">Order Monitoring System</h3>
+            <p class="case__lede">
+              A full-stack, fully branded web application I designed, built, and deployed for
+              <strong>Mark D' Unlimited Enterprise</strong> — in daily use by the whole team at
+              <strong>mdueoms.com</strong>. It follows every print job from order to release:
+              live status, role-based workflow stages, deadline timers, approvals, and a
+              built-in team chat, replacing tracking that used to run on paper and memory.
+            </p>
+            <div class="case__meta">
+              <span class="stat-pill">6 staff roles</span>
+              <span class="stat-pill">Order → release workflow</span>
+              <span class="stat-pill">Real-time dashboard</span>
+              <span class="stat-pill">Built-in chat</span>
+            </div>
           </div>
+        </div>
+
+        <!-- Screenshot deck -->
+        <div class="shots">
+          <div class="shots__tabs" role="group" aria-label="Choose a screenshot">
+            <button class="shots__tab" data-index="0" aria-current="true">Manager Dashboard</button>
+            <button class="shots__tab" data-index="1">Login</button>
+            <button class="shots__tab" data-index="2">Sign-up</button>
+          </div>
+
+          <div class="deck" id="oms-deck" role="group" aria-roledescription="carousel" aria-label="Order Monitoring System screenshots">
+            <button class="deck__nav deck__nav--prev" aria-label="Previous screenshot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="deck__stage">
+              <div class="deck__card is-active">
+                <div class="shots__bar" aria-hidden="true">
+                  <span class="shots__dot"></span><span class="shots__dot"></span><span class="shots__dot"></span>
+                  <span class="shots__url">mdueoms.com</span>
+                </div>
+                <button class="shots__zoom" aria-label="View the manager dashboard screenshot full size">
+                  <img src="assets/oms-dashboard.png" alt="Sales Manager dashboard in the Order Monitoring System, showing confirmed and cancelled order totals, a revenue trend chart, and workflow stage counts" loading="lazy" width="1903" height="949" />
+                </button>
+              </div>
+
+              <div class="deck__card is-next">
+                <div class="shots__bar" aria-hidden="true">
+                  <span class="shots__dot"></span><span class="shots__dot"></span><span class="shots__dot"></span>
+                  <span class="shots__url">mdueoms.com/login</span>
+                </div>
+                <button class="shots__zoom" aria-label="View the login screen screenshot full size">
+                  <img src="assets/oms-login.png" alt="Order Monitoring System login screen with the MDU branding and a colour-gradient panel" loading="lazy" width="1919" height="949" />
+                </button>
+              </div>
+
+              <div class="deck__card is-prev">
+                <div class="shots__bar" aria-hidden="true">
+                  <span class="shots__dot"></span><span class="shots__dot"></span><span class="shots__dot"></span>
+                  <span class="shots__url">mdueoms.com/register</span>
+                </div>
+                <button class="shots__zoom" aria-label="View the sign-up form screenshot full size">
+                  <img src="assets/oms-register.png" alt="Order Monitoring System account creation form with name, username, password, department, and profile photo fields" loading="lazy" width="1902" height="949" />
+                </button>
+              </div>
+            </div>
+
+            <button class="deck__nav deck__nav--next" aria-label="Next screenshot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+
+          <p class="shots__caption" id="deck-status" aria-live="polite">1 / 3 · Manager Dashboard — tap the card to view it full size</p>
+        </div>
+
+        <!-- Chat spotlight -->
+        <div class="chat-spot">
+          <div>
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Built-in team chat
+            </h4>
+            <p>
+              Nobody has to leave the system to ask a question. Messaging is built straight into the app,
+              so staff can reach the <strong>Super Admin</strong>, <strong>Accounting</strong>, or the
+              <strong>Sales Manager</strong> about a specific order — approvals, payment questions, and edit
+              requests get settled inside the system instead of scattered across text messages and calls.
+            </p>
+          </div>
+          <div class="chat-roles">
+            <span class="chat-role chat-role--a">Super Admin</span>
+            <span class="chat-role chat-role--b">Accounting</span>
+            <span class="chat-role">Sales Manager</span>
+          </div>
+        </div>
+
+        <!-- Feature grid -->
+        <div class="case__features">
+          <div class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <h4>Live order status</h4>
+            <p>Every job's current stage is visible to the whole team the moment it changes — no more "let me go check."</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h4>Deadline timers</h4>
+            <p>Each order carries its own countdown, so rush jobs surface before they become late jobs.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h4>Role-based access</h4>
+            <p>Sales, sales manager, accounting, operators, production, and releasing each see only their own part of the workflow.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg></div>
+            <h4>Sales analytics</h4>
+            <p>Revenue, confirmed vs. cancelled orders, quantities, and period-over-period comparison on one dashboard.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 4v5c0 4.5-3 8.3-7 9-4-.7-7-4.5-7-9V7z"/></svg></div>
+            <h4>Approvals &amp; edit requests</h4>
+            <p>Order changes and releases route through the right approver, with a record of who approved what.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <h4>Custom branded UI</h4>
+            <p>Designed around the shop's own CMYK identity — the system looks like it belongs to the business, not a template.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---- Other projects ---- -->
+      <div class="grid-2" style="margin-top: var(--space-6);">
+        <article class="project-card">
+          <div class="project-card__banner">Ctrl+Fix</div>
           <div class="project-card__body">
-            <span class="project-card__tag">PHP · MySQL · JavaScript · Live in production</span>
-            <h3 class="project-card__title">Order Monitoring System</h3>
+            <span class="project-card__tag">PHP · MySQL · In progress</span>
+            <h3 class="project-card__title">Ctrl+Fix Knowledge Base</h3>
             <p class="project-card__desc">
-              A full-stack, branded web application I designed, built, and deployed for Mark D' Unlimited
-              Enterprise — live in daily use at <strong>mdueoms.com</strong>. It tracks every print job from
-              order to release, with live order status, full workflow stages, and deadline timers, replacing
-              paper-and-memory tracking across the team.
+              An IT knowledge base for the fixes I actually run into — hardware, printers, and network
+              issues written up so the next person doesn't have to rediscover them.
             </p>
             <div class="project-card__links">
-              <a href="#contact">Ask me about it →</a>
+              <a href="https://github.com/GitRavz" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
           </div>
         </article>
@@ -173,7 +316,7 @@
               collaborate on something.
             </p>
             <div class="project-card__links">
-              <a href="https://github.com/GitRavz" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#contact">Let's talk →</a>
             </div>
           </div>
         </article>
@@ -194,6 +337,7 @@
           <ul>
             <li>Designed, built, and deployed an end-to-end order monitoring system for a live printing business.</li>
             <li>Replaced paper- and memory-based tracking, improving order tracking and workflow efficiency across the team.</li>
+            <li>Built role-based access for six staff roles, plus an in-app chat that lets staff reach the super admin, accounting, and the sales manager without leaving the system.</li>
             <li>Owned the full stack — database schema, PHP backend, and the front-end interface used daily by staff.</li>
             <li>Accelerated delivery with AI-assisted development (Claude Code) while owning every query and line in production.</li>
           </ul>
@@ -229,20 +373,20 @@
   <section id="contact" class="contact">
     <div class="container container--narrow reveal">
       <span class="available-badge">Open to opportunities</span>
-      <h2 class="section-title">Let's work together.</h2>
+      <h2 class="section-title section-title--wide" style="margin-inline: auto;">Let's work together.</h2>
       <p style="color: var(--color-text-muted); font-size: var(--text-lg);">
         Open to web development projects and technical support roles — feel free to reach out.
       </p>
       <a href="mailto:lhienhielravelo13@gmail.com" class="contact__email">lhienhielravelo13@gmail.com</a>
       <div class="social-row">
         <a href="https://github.com/GitRavz" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
         </a>
         <a href="https://www.linkedin.com/in/lhienhiel-ravelo" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
         </a>
         <a href="mailto:lhienhielravelo13@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
         </a>
       </div>
     </div>
@@ -255,6 +399,12 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close preview">&times;</button>
+    <img src="" alt="" id="lightbox-img" />
+  </div>
+
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>

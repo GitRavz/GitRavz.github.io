@@ -1,48 +1,61 @@
 :root {
-  /* Primary – navy blue, pulled from the polo in the hero photo */
-  --color-primary:       #2C4A8C;
-  --color-primary-light: #5E7BC4;
-  --color-primary-dim:   #E9EEF8;
+  /* ===== Dark surfaces — neutral black, no colour cast ===== */
+  --color-bg:          #0A0A0B;
+  --color-bg-elev:     #111113;
+  --color-surface:     #16161A;
+  --color-surface-2:   #1D1D22;
+  --color-border:      #2A2A30;
+  --color-border-soft: #202026;
 
-  /* Neutrals – warm off-white to echo the building's sand tone */
-  --color-bg:            #FAF8F4;
-  --color-surface:       #FFFFFF;
-  --color-border:        #E7E2D9;
-  --color-text:          #1B2440;
-  --color-text-muted:    #6B7280;
+  /* ===== Text ===== */
+  --color-text:        #F5F5F7;
+  --color-text-muted:  #A6A6AE;
+  --color-text-faint:  #8A8A93; /* clears 4.5:1 on both --color-bg and --color-surface */
 
-  /* Accent – warm sand, from the building behind him */
-  --color-accent:        #C69C6D;
+  /* ===== Accent — monochrome: white is the only accent ===== */
+  --color-accent:      #FFFFFF;
+  --color-primary:     #FFFFFF;
+  --color-primary-dim: rgba(255, 255, 255, 0.10);
 
-  /* Status */
-  --color-success:       #2F9E44;
-  --color-error:         #E03131;
+  /* ===== Gradients — white through grey to charcoal ===== */
+  --grad-brand:  linear-gradient(115deg, #FFFFFF 0%, #DCDCE2 45%, #9EA0A8 100%);
+  --grad-text:   linear-gradient(100deg, #FFFFFF 0%, #D2D2D9 55%, #9EA0A8 100%);
+  --grad-edge:   linear-gradient(115deg, rgba(255,255,255,.55), rgba(255,255,255,.18), rgba(255,255,255,.38));
+  --grad-glass:  linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
 
-  /* Fonts */
-  --font-sans:  'Inter', system-ui, sans-serif;
-  --font-mono:  'JetBrains Mono', 'Courier New', monospace;
+  /* ===== Status — kept monochrome, signalled by shape and motion ===== */
+  --color-success: #E8E8ED;
+  --color-error:   #E8E8ED;
 
-  /* Type scale */
-  --text-xs:    0.75rem;
-  --text-sm:    0.875rem;
-  --text-base:  1rem;
-  --text-lg:    1.125rem;
-  --text-xl:    1.25rem;
-  --text-2xl:   1.5rem;
-  --text-3xl:   2rem;
-  --text-4xl:   2.75rem;
-  --text-5xl:   3.5rem;
+  /* ===== Fonts — "computer" type: mono for everything structural ===== */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'Courier New', monospace;
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+  /* ===== Type scale ===== */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  2rem;
+  --text-4xl:  2.75rem;
+  --text-5xl:  3.5rem;
 
   --font-weight-normal:   400;
   --font-weight-medium:   500;
   --font-weight-semibold: 600;
   --font-weight-bold:     700;
+  --font-weight-black:    800;
 
-  --leading-tight:   1.2;
-  --leading-normal:  1.6;
+  --leading-tight:   1.15;
+  --leading-normal:  1.65;
   --leading-relaxed: 1.8;
 
-  /* Spacing */
+  --track-tight: -0.03em;
+  --track-wide:  0.18em;
+
+  /* ===== Spacing ===== */
   --space-1:  0.25rem;
   --space-2:  0.5rem;
   --space-3:  0.75rem;
@@ -54,16 +67,17 @@
   --space-24: 6rem;
   --space-32: 8rem;
 
-  /* Radius */
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
-  --radius-xl:   20px;
+  /* ===== Radius ===== */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm:   0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md:   0 4px 16px rgba(0,0,0,0.08);
-  --shadow-lg:   0 12px 40px rgba(0,0,0,0.10);
-  --shadow-card: 0 2px 12px rgba(44,74,140,0.08);
+  /* ===== Elevation — dark UI reads depth through glow, not drop shadow ===== */
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.5);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.45);
+  --shadow-lg:  0 24px 60px rgba(0,0,0,0.6);
+  --glow-white: 0 0 0 1px rgba(255,255,255,0.14), 0 12px 40px rgba(255,255,255,0.08);
+  --glow-soft:  0 12px 40px rgba(255,255,255,0.06);
 }

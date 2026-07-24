@@ -1,6 +1,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  color-scheme: dark;
+}
 
 body {
   font-family: var(--font-sans);
@@ -9,40 +13,85 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+
+/* Ambient aurora — the page's light source, fixed behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20% -10% auto -10%;
+  height: 70vh;
+  background:
+    radial-gradient(50% 55% at 18% 8%,  rgba(255,255,255,0.10), transparent 70%),
+    radial-gradient(45% 50% at 78% 0%,  rgba(255,255,255,0.07), transparent 70%),
+    radial-gradient(40% 45% at 55% 30%, rgba(255,255,255,0.04), transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * { position: relative; z-index: 1; }
 
 img { max-width: 100%; display: block; }
 
-a { color: var(--color-primary); text-decoration: none; }
-a:hover { color: var(--color-primary-light); }
+a { color: var(--color-text); text-decoration: none; transition: color 0.2s ease, opacity 0.2s ease; }
+a:hover { color: #FFFFFF; }
 
-h1, h2, h3 { line-height: var(--leading-tight); font-weight: var(--font-weight-bold); }
+h1, h2, h3 {
+  font-family: var(--font-mono);
+  line-height: var(--leading-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--track-tight);
+}
 
 ul { list-style: none; }
 
+::selection { background: rgba(255,255,255,0.25); color: #fff; }
+
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid #FFFFFF;
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
-/* Section rhythm — whitespace is the design */
+/* Section rhythm */
 section { padding-block: var(--space-24); }
 @media (max-width: 768px) { section { padding-block: var(--space-16); } }
 
+/* Mono eyebrow label with a gradient tick */
 .section-label {
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--color-primary);
-  letter-spacing: 0.15em;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: var(--track-wide);
   text-transform: uppercase;
-  display: block;
-  margin-bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.section-label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--grad-brand);
 }
 
 .section-title {
   font-size: var(--text-3xl);
   margin-bottom: var(--space-8);
+  max-width: 22ch;
+}
+.section-title--wide { max-width: none; }
+
+/* Gradient type — used sparingly, on one phrase per view */
+.grad-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Scroll-reveal base state */
@@ -56,4 +105,5 @@ section { padding-block: var(--space-24); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
